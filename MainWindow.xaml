@@ -9,7 +9,6 @@
         Background="#303030">
 
     <Window.Resources>
-        <!-- Card Style -->
         <Style x:Key="CardStyle" TargetType="Border">
             <Setter Property="Background" Value="#252525"/>
             <Setter Property="CornerRadius" Value="0"/>
@@ -18,7 +17,6 @@
             <Setter Property="Padding" Value="20"/>
         </Style>
 
-        <!-- Modern Square Button Style -->
         <Style x:Key="SquareButton" TargetType="Button">
             <Setter Property="Background" Value="#1a236e"/>
             <Setter Property="Foreground" Value="#e3e3e6"/>
@@ -40,7 +38,6 @@
             </Style.Triggers>
         </Style>
 
-        <!-- Text Styles -->
         <Style x:Key="Heading1" TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -62,14 +59,12 @@
     </Window.Resources>
 
     <Grid>
-        <!-- Main Layout -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- App Header -->
         <Border Grid.Row="0" Background="#1a236e" Padding="15">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="MindScribe" 
@@ -84,9 +79,7 @@
             </StackPanel>
         </Border>
 
-        <!-- Main Content Area -->
         <Grid Grid.Row="1" Margin="20">
-            <!-- Year Selection View -->
             <Grid Name="yearView">
                 <Border Style="{StaticResource CardStyle}">
                     <ScrollViewer>
@@ -108,7 +101,6 @@
                 </Border>
             </Grid>
 
-            <!-- Month Selection View -->
             <Grid Name="monthView" Visibility="Collapsed">
                 <Border Style="{StaticResource CardStyle}">
                     <ScrollViewer>
@@ -136,7 +128,6 @@
                 </Border>
             </Grid>
 
-            <!-- Day Selection View -->
             <Grid Name="dayView" Visibility="Collapsed">
                 <Border Style="{StaticResource CardStyle}">
                     <ScrollViewer>
@@ -146,14 +137,12 @@
                                       HorizontalAlignment="Center"/>
 
                             <UniformGrid Columns="7" HorizontalAlignment="Center" Margin="0,20" Name="dayButtonsGrid">
-                                <!-- Day buttons will be generated dynamically -->
                             </UniformGrid>
                         </StackPanel>
                     </ScrollViewer>
                 </Border>
             </Grid>
 
-            <!-- Journal Entry View -->
             <Grid Name="journalView" Visibility="Collapsed">
                 <Border Style="{StaticResource CardStyle}">
                     <Grid>
@@ -184,7 +173,6 @@
             </Grid>
         </Grid>
 
-        <!-- Footer Navigation -->
         <Border Grid.Row="2" Background="#252525" Padding="10">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="backButton" Content="BACK" 
@@ -214,4 +202,5 @@
             </StackPanel>
         </Border>
     </Grid>
+
 </Window>
