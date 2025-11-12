@@ -19,7 +19,6 @@
                       HorizontalAlignment="Center"
                       Margin="0,0,0,40"/>
 
-            <!-- Modern Progress Bar -->
             <Border Width="300" Height="19" Background="#3a3a4a" CornerRadius="4">
                 <Border x:Name="progressFill" 
                        Width="0" 
@@ -36,4 +35,5 @@
                       Margin="0,40,0,0"/>
         </StackPanel>
     </Grid>
+
 </Window>
